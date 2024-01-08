@@ -12,11 +12,12 @@ class InfluenceBox extends Phaser.GameObjects.Container
 
         this.scene.add.existing(this);
 
-        emitter.on(G.ARTIFACT_UPDATED,this.artifactUpdated,this);
+        emitter.on(G.INFLUENCE_UPDATED,this.influenceUpdated,this);
         
     }
-    artifactUpdated(){
+    influenceUpdated(){
         //this.text1.setText("Artifacts: "+ model.artifact);
+        console.log("influence updated");
     }
 
 }

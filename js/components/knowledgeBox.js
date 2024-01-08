@@ -12,11 +12,12 @@ class KnowledgeBox extends Phaser.GameObjects.Container
 
         this.scene.add.existing(this);
 
-        emitter.on(G.ARTIFACT_UPDATED,this.artifactUpdated,this);
+        emitter.on(G.KNOWLEDGE_UPDATED,this.knowledgeUpdated,this);
         
     }
-    artifactUpdated(){
+    knowledgeUpdated(){
         //this.text1.setText("Artifacts: "+ model.artifact);
+        console.log("knowledge updated");
     }
 
 }

@@ -4,9 +4,19 @@ class Controller
     {
         emitter.on(G.SET_PROGRESS,this.setprogress);
         emitter.on(G.MODIFY_PROGRESS,this.modifyprogress);
+
         emitter.on(G.SET_ARTIFACT,this.setartifact);
         emitter.on(G.MODIFY_ARTIFACT,this.modifyartifact);
+
+        emitter.on(G.SET_INFLUENCE,this.setinfluence);
+        emitter.on(G.MODIFY_INFLUENCE,this.modifyinfluence);
+
+        emitter.on(G.SET_KNOWLEDGE,this.setknowledge);
+        emitter.on(G.MODIFY_KNOWLEDGE,this.modifyknowledge);
+
     }
+    //TODO-create getters and setters for influence and knowledge
+
     setprogress(progress)
     {
         model.progress=progress;
@@ -25,4 +35,5 @@ class Controller
         modelVal +=val;
         model.artifact=modelVal;
     }
+
 }
