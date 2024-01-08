@@ -11,11 +11,11 @@ class ScoreBox extends Phaser.GameObjects.Container
 
         this.scene.add.existing(this);
 
-        emitter.on(G.ENERGY_UPDATED,this.energyUpdated,this);
+        emitter.on(G.PROGRESS_UPDATED,this.progressUpdated,this);
         
     }
-    energyUpdated(){
-        this.text1.setText(model.energy);
+    progressUpdated(){
+        this.text1.setText(model.progress);
     }
 
 }

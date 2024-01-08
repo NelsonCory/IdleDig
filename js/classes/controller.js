@@ -2,16 +2,27 @@ class Controller
 {
     constructor()
     {
-        emitter.on(G.SET_ENERGY,this.setEnergy);
-        emitter.on(G.MODIFY_ENERGY,this.modifyEnergy);
+        emitter.on(G.SET_PROGRESS,this.setprogress);
+        emitter.on(G.MODIFY_PROGRESS,this.modifyprogress);
+        emitter.on(G.SET_ARTIFACT,this.setartifact);
+        emitter.on(G.MODIFY_ARTIFACT,this.modifyartifact);
     }
-    setEnergy(energy)
+    setprogress(progress)
     {
-        model.energy=energy;
+        model.progress=progress;
     }
-    modifyEnergy(val){
-        var modelVal = model.energy;
+    modifyprogress(val){
+        var modelVal = model.progress;
         modelVal += val;
-        model.energy=modelVal;
+        model.progress=modelVal;
+    }
+    setartifact(artifact)
+    {
+        model.artifact=artifact;
+    }
+    modifyartifact(val){
+        var modelVal = model.artifact;
+        modelVal +=val;
+        model.artifact=modelVal;
     }
 }
