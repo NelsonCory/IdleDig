@@ -28,8 +28,6 @@ class SceneMain extends Phaser.Scene {
         this.ib = new InfluenceBox({scene:this});
         this.kb = new KnowledgeBox({scene:this});
 
-        
-
 		//initialize placement of UI elements
 		var gridConfig = {rows:11,cols:11,scene:this};
 		this.alignGrid = new AlignGrid(gridConfig);
@@ -42,13 +40,16 @@ class SceneMain extends Phaser.Scene {
 		//this.alignGrid.placeAtIndex(104,this.flatButton);
 		//initialize emitters
         emitter.on("button_pressed",this.buttonPressed,this);
+
+        this.eventManager = new EventManager();
+        this.eventManager.addEvent(new EventInfo("0","testName","testImage","eventText","testChoice"));
+        this.eventManager.deployEvent();
     }
     buttonPressed(params)
     {
 		if(params == "dig"){
 			emitter.emit(G.MODIFY_PROGRESS,1);
 		}
-        console.log(params);
     }
     update() {
         // constant running loop

@@ -15,8 +15,22 @@ class Controller
         emitter.on(G.MODIFY_KNOWLEDGE,this.modifyknowledge);
 
     }
-    //TODO-create getters and setters for influence and knowledge
-
+    setinfluence(influence){
+        model.influence = influence;
+    }
+    modifyinfluence(val){
+        var modelVal = model.influence;
+        modelVal +=val;
+        model.influence=modelVal;
+    }
+    setknowledge(knowledge){
+        model.knowledge = knowledge;
+    }
+    modifyknowledge(val){
+        var modelVal = model.knowledge;
+        modelVal +=val;
+        model.knowledge=modelVal;
+    }
     setprogress(progress)
     {
         model.progress=progress;
