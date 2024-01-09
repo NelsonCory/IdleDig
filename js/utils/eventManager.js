@@ -6,8 +6,11 @@ class EventManager{
     addEvent(event){
         this.eventArr.push(event);
     }
-    deployEvent(){
-        console.log(this.eventArr);
+    deployNextEvent(){
+        if(this.eventArr.length>0){
+            var nextEvent = this.eventArr.pop();
+            return nextEvent;
+        }
     }
     
 

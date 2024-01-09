@@ -7,13 +7,14 @@ class SceneMain extends Phaser.Scene {
         //load images or sounds
         this.load.image("button1","assets/dig-temp.png");
         this.load.image("digger","assets/mr-dig.png");
+        this.load.image("eventBack","assets/eventBackground.png");
+        this.load.image("testImage","assets/testImage.png");
+        this.load.image("choiceButton","assets/choiceButton.png");
     }
     create() {
     
 		emitter= new Phaser.Events.EventEmitter();
         controller = new Controller();
-
-        //this.sb = new ScoreBox({scene:this});
 
         model.progress=0;
         console.log(model.progress);
@@ -42,11 +43,13 @@ class SceneMain extends Phaser.Scene {
         emitter.on("button_pressed",this.buttonPressed,this);
 
         this.eventManager = new EventManager();
-        this.eventManager.addEvent(new EventInfo("0","testName","testImage","eventText","testChoice"));
-        this.eventManager.deployEvent();
+        this.eventManager.addEvent(new EventInfo("0","Sample Event","testImage","Ominous events gather!",[{event:'button_pressed',params:"eventTest",text:"THIS IS A TEST"},{event:'button_pressed',params:"eventTest",text:"ANOTHER TEST"}]));
+        var temp = new EventBox({scene:this, event:this.eventManager.deployNextEvent()});
+
     }
     buttonPressed(params)
     {
+        
 		if(params == "dig"){
 			emitter.emit(G.MODIFY_PROGRESS,1);
 		}

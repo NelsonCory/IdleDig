@@ -18,14 +18,19 @@ class FlatButton extends Phaser.GameObjects.Container
         this.scene=config.scene;
         this.back = this.scene.add.image(0,0,config.key);
         this.add(this.back);
+        
+        console.log(this.config);
 
         if (config.text)
         {
+            //console.log("config.text");
             if(config.textConfig)
             {
+                //console.log("textConfig detected");
                 this.text1=this.scene.add.text(0,0,config.text,config.textConfig);
             }
             else{
+                console.log(config.text);
                 this.text1=this.scene.add.text(0,0,config.text);
             }
             this.text1.setOrigin(0.5,0.5);
