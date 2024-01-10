@@ -2,7 +2,6 @@ class InfluenceBox extends Phaser.GameObjects.Container
 {
     constructor(config)
     {
-        //nonfunctional at this time,
         super(config.scene);
         this.scene = config.scene;
 
@@ -16,7 +15,7 @@ class InfluenceBox extends Phaser.GameObjects.Container
         
     }
     influenceUpdated(){
-        //this.text1.setText("Artifacts: "+ model.artifact);
+        this.text1.setText("Influence: "+ model.influence);
         console.log("influence updated");
     }
 

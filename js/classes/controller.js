@@ -14,6 +14,9 @@ class Controller
         emitter.on(G.SET_KNOWLEDGE,this.setknowledge);
         emitter.on(G.MODIFY_KNOWLEDGE,this.modifyknowledge);
 
+        //accept event
+        emitter.on(G.CHOICE_MADE,this.choicemade);
+
     }
     setinfluence(influence){
         model.influence = influence;
@@ -48,6 +51,17 @@ class Controller
         var modelVal = model.artifact;
         modelVal +=val;
         model.artifact=modelVal;
+    }
+    choicemade(val){
+        //for each item in val, modify that item
+        if(val.knowledgeChange){
+            model.knowledge += val.knowledgeChange;
+        }
+        if(val.influenceChange){
+            model.influence += val.influenceChange;
+        }
+
+
     }
 
 }

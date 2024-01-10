@@ -1,4 +1,4 @@
-class FlatButton extends Phaser.GameObjects.Container
+class ChoiceButton extends Phaser.GameObjects.Container
 {
     constructor(config)
     {
@@ -19,8 +19,8 @@ class FlatButton extends Phaser.GameObjects.Container
         this.back = this.scene.add.image(0,0,config.key);
         this.add(this.back);
         
-        //console.log(this.config);
-        console.log("button params: " + this.config.params)
+        console.log(this.config);
+
         if (config.text)
         {
             //console.log("config.text");

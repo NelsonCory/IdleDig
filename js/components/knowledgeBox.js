@@ -2,7 +2,6 @@ class KnowledgeBox extends Phaser.GameObjects.Container
 {
     constructor(config)
     {
-        //nonfunctional at this time
         super(config.scene);
         this.scene = config.scene;
 
@@ -16,8 +15,8 @@ class KnowledgeBox extends Phaser.GameObjects.Container
         
     }
     knowledgeUpdated(){
-        //this.text1.setText("Artifacts: "+ model.artifact);
-        console.log("knowledge updated");
+        this.text1.setText("Knowledge: "+ model.knowledge);
+        console.log("knowledge updated (KB)");
     }
 
 }

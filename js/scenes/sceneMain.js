@@ -13,6 +13,21 @@ class SceneMain extends Phaser.Scene {
     }
     create() {
     
+        /*
+        TODO
+            Fundamental
+                Implement Timer (https://rexrainbow.github.io/phaser3-rex-notes/docs/site/timer/)
+                    - timer based on progRate
+                Finish event system
+            Develop events for questlines as well as random events
+
+            Art&music, animations 
+
+        */
+
+        //saving importing json files
+        // /https://newdocs.phaser.io/docs/3.54.0/focus/Phaser.Loader.LoaderPlugin-json
+
 		emitter= new Phaser.Events.EventEmitter();
         controller = new Controller();
 
@@ -42,17 +57,24 @@ class SceneMain extends Phaser.Scene {
 		//initialize emitters
         emitter.on("button_pressed",this.buttonPressed,this);
 
-        this.eventManager = new EventManager();
-        this.eventManager.addEvent(new EventInfo("0","Sample Event","testImage","Ominous events gather!",[{event:'button_pressed',params:"eventTest",text:"THIS IS A TEST"},{event:'button_pressed',params:"eventTest",text:"ANOTHER TEST"}]));
-        var temp = new EventBox({scene:this, event:this.eventManager.deployNextEvent()});
+        
+        model.eventManager.addEvent(new EventInfo("0","Sample Event","testImage","Ominous events gather!",[{event:'button_pressed',text:"THIS IS A TEST",results:{knowledgeChange:1}},
+                                                                                                            {event:'button_pressed',text:"ANOTHER TEST",results:{influenceChange:2}}]));
+        var temp = new EventBox({scene:this, event:model.eventManager.deployNextEvent()});
 
     }
     buttonPressed(params)
     {
-        
+        console.log(params);
 		if(params == "dig"){
 			emitter.emit(G.MODIFY_PROGRESS,1);
 		}
+
+        //process choices
+        if(!(typeof myVar === 'string')){
+            console.log("params:" + params);
+            emitter.emit(G.CHOICE_MADE,params);
+        }
     }
     update() {
         // constant running loop

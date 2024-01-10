@@ -30,13 +30,13 @@ class EventBox extends Phaser.GameObjects.Container{
         this.add(this.eventText);
         //create buttons for event
         this.buttonList = []
+        //console.log(this.event.eventChoices);
         for(var i = 0; i < this.event.eventChoices.length;i++)
         {
             //place button
             
-            this.buttonList[i] = new FlatButton({scene:this.scene,key:"choiceButton",x:this.eventBack.x,y:Math.floor(this.eventBack.height*0.8)+50*i,params:"testbutton"+i,text:this.event.eventChoices[i].text,textConfig:{color:"black"},event:this.event.eventChoices[i].event});
+            this.buttonList[i] = new FlatButton({scene:this.scene,key:"choiceButton",x:this.eventBack.x,y:Math.floor(this.eventBack.height*0.8)+50*i,params:this.event.eventChoices[i].results,text:this.event.eventChoices[i].text,textConfig:{color:"black"},event:this.event.eventChoices[i].event});
             this.add(this.buttonList[i]);
-            //console.log(this.buttonList[i]);
         }
 
         emitter.on("button_pressed",this.buttonPressed,this);
@@ -44,7 +44,9 @@ class EventBox extends Phaser.GameObjects.Container{
         this.scene.add.existing(this);
     }
     buttonPressed(params){
-        console.log("button! button! button!");
+        //var choiceResults = this.event.eventChoices[parseInt(params)].eventResults;
+       // emitter.emit(G.CHOICE_MADE,choiceResults);
+        
         this.removeAll(this);
     }
 
