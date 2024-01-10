@@ -4,6 +4,9 @@ class EventBox extends Phaser.GameObjects.Container{
         this.event = config.event;
         this.scene = config.scene;
 
+        console.log("Event Box");
+        console.log(config.event);
+
         //eventID
         //EventName
         //eventPicture
@@ -34,8 +37,15 @@ class EventBox extends Phaser.GameObjects.Container{
         for(var i = 0; i < this.event.eventChoices.length;i++)
         {
             //place button
-            
-            this.buttonList[i] = new FlatButton({scene:this.scene,key:"choiceButton",x:this.eventBack.x,y:Math.floor(this.eventBack.height*0.8)+50*i,params:this.event.eventChoices[i].results,text:this.event.eventChoices[i].text,textConfig:{color:"black"},event:this.event.eventChoices[i].event});
+
+
+            console.log("loop event");
+            console.log(this.event);
+            console.log(this.event.eventChoices[i]);
+            console.log(this.event.eventChoices[i].results);
+            this.buttonList[i] = new FlatButton({scene:this.scene,key:"choiceButton",x:this.eventBack.x,y:Math.floor(this.eventBack.height*0.8)+50*i,
+                                                        params:this.event.eventChoices[i].results,text:this.event.eventChoices[i].text,
+                                                        textConfig:{color:"black"},event:"button_pressed"});
             this.add(this.buttonList[i]);
         }
 

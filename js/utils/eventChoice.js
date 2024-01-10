@@ -1,10 +1,10 @@
 class EventChoice{
 
     constructor(config){
-        this.eventID = config.eventID;
-        this.eventText = config.text;
+        
+        this.text = config.text;
         this.results = config.results;
-        console.log(config);
+        //console.log(config);
         //results is an object detailing all changes
         /*
         {

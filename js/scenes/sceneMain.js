@@ -10,9 +10,16 @@ class SceneMain extends Phaser.Scene {
         this.load.image("eventBack","assets/eventBackground.png");
         this.load.image("testImage","assets/testImage.png");
         this.load.image("choiceButton","assets/choiceButton.png");
+    
+        //load data
+        this.load.json({key:"academyData",
+                        url:"js/data/academy.json"});
+    
+
+        
     }
     create() {
-    
+        
         /*
         TODO
             Fundamental
@@ -25,14 +32,15 @@ class SceneMain extends Phaser.Scene {
 
         */
 
-        //saving importing json files
-        // /https://newdocs.phaser.io/docs/3.54.0/focus/Phaser.Loader.LoaderPlugin-json
+        //process event data
+        var academyData = this.cache.json.get("academyData");
+        model.eventManager.loadEvents(academyData);
 
 		emitter= new Phaser.Events.EventEmitter();
         controller = new Controller();
 
         model.progress=0;
-        console.log(model.progress);
+        //console.log(model.progress);
         
 		//should scale based on button size
         var flatButton = new FlatButton({scene:this, key:"button1",x:game.config.width/2,y:game.config.height - 100, event:'button_pressed',params:"dig"});
@@ -57,14 +65,15 @@ class SceneMain extends Phaser.Scene {
 		//initialize emitters
         emitter.on("button_pressed",this.buttonPressed,this);
 
-        
-        model.eventManager.addEvent(new EventInfo("0","Sample Event","testImage","Ominous events gather!",[{event:'button_pressed',text:"THIS IS A TEST",results:{knowledgeChange:1}},
-                                                                                                            {event:'button_pressed',text:"ANOTHER TEST",results:{influenceChange:2}}]));
-        var temp = new EventBox({scene:this, event:model.eventManager.deployNextEvent()});
+        var testEvent = model.eventManager.deployNextEvent();
+        console.log("event on scenemain");
+        console.log(testEvent);
+        var temp = new EventBox({scene:this, event:testEvent});
 
     }
     buttonPressed(params)
     {
+        console.log("ayyyy");
         console.log(params);
 		if(params == "dig"){
 			emitter.emit(G.MODIFY_PROGRESS,1);

@@ -1,0 +1,56 @@
+{
+    "events":[
+            {   "eventID":0,
+                "eventName": "Debug Event",
+                "eventImage":"testImage",
+                "eventText":"Body of Event",
+                "eventChoices":
+                    [
+                        {"text":"Choice One",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 1,
+                                "knowledgeChange": 5
+                            }
+                        },
+                        {"text":"Next Event",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 0,
+                            "influenceChange":0,
+                            "knowledgeChange":1,
+                            "nextEvent": 1
+                        }}
+                    ]
+                },
+                {   "eventID":1,
+                "eventName": "Debug Next Event",
+                "eventImage":"testImage",
+                "eventText":"Body of Next Event",
+                "eventChoices":
+                    [
+                        {"text":"Buff I K",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 5,
+                                "knowledgeChange": 5
+                            }
+                        },
+                        {"text":"Buff artifact",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 50,
+                            "influenceChange":0,
+                            "knowledgeChange":1
+                        }}
+                    ]
+                }
+    ]
+
+}

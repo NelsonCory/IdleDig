@@ -20,7 +20,8 @@ class FlatButton extends Phaser.GameObjects.Container
         this.add(this.back);
         
         //console.log(this.config);
-        console.log("button params: " + this.config.params)
+        console.log("button params");
+        console.log(this.config.params)
         if (config.text)
         {
             //console.log("config.text");
@@ -63,6 +64,8 @@ class FlatButton extends Phaser.GameObjects.Container
     }
     pressed(){
         if (this.config.params){
+            console.log("outputting params on press");
+            console.log(this.config.params);
             emitter.emit(this.config.event, this.config.params);
         }
         else{
