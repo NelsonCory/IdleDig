@@ -31,8 +31,10 @@ class EventManager{
         }
         console.log("map");
         console.log(this.allEvents.get(0));
-        this.addEvent(this.allEvents.get(0));
+        this.addEvent(this.allEvents.get(0)); //debug
     }
-    
-
+    queueNextEvent(eventID){
+        this.addEvent(this.allEvents.get(eventID));
+        console.log("Next Event will be: "+ eventID);
+    }
 }

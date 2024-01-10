@@ -17,6 +17,8 @@ class Controller
         //accept event
         emitter.on(G.CHOICE_MADE,this.choicemade);
 
+
+
     }
     setinfluence(influence){
         model.influence = influence;
@@ -59,6 +61,16 @@ class Controller
         }
         if(val.influenceChange){
             model.influence += val.influenceChange;
+        }
+        if(val.artifactChange){
+            model.artifact += val.artifactChange;
+        }
+        if(val.progRateChange){
+            model.progRateChange = val.progRateChange;
+        }
+        if(val.nextEvent){
+            //modify event manager
+            model.eventManager.queueNextEvent(val.nextEvent);
         }
 
 

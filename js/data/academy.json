@@ -32,9 +32,9 @@
                 "eventText":"Body of Next Event",
                 "eventChoices":
                     [
-                        {"text":"Buff I K",
+                        {"text":"Buff I K progRate",
                             "results":{
-                                "progChange": 0,
+                                "progChange": 1,
                                 "progRateChange": 0,
                                 "artifactChange": 0,
                                 "influenceChange": 5,
