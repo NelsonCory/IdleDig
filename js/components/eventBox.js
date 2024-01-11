@@ -4,8 +4,6 @@ class EventBox extends Phaser.GameObjects.Container{
         this.event = config.event;
         this.scene = config.scene;
 
-        console.log("Event Box");
-        console.log(config.event);
 
         //eventID
         //EventName
@@ -38,17 +36,18 @@ class EventBox extends Phaser.GameObjects.Container{
         {
             //place button
 
-
+            /*
             console.log("loop event");
             console.log(this.event);
             console.log(this.event.eventChoices[i]);
             console.log(this.event.eventChoices[i].results);
+            */
             this.buttonList[i] = new FlatButton({scene:this.scene,key:"choiceButton",x:this.eventBack.x,y:Math.floor(this.eventBack.height*0.8)+50*i,
                                                         params:this.event.eventChoices[i].results,text:this.event.eventChoices[i].text,
                                                         textConfig:{color:"black"},event:"button_pressed"});
             this.add(this.buttonList[i]);
         }
-
+        controller.gameTimer.pauseTimers();
         emitter.on("button_pressed",this.buttonPressed,this);
 
         this.scene.add.existing(this);
@@ -56,8 +55,11 @@ class EventBox extends Phaser.GameObjects.Container{
     buttonPressed(params){
         //var choiceResults = this.event.eventChoices[parseInt(params)].eventResults;
        // emitter.emit(G.CHOICE_MADE,choiceResults);
-        
-        this.removeAll(this);
+
+       if(params != "dig"){
+            controller.gameTimer.startTimers();
+            this.removeAll(this);
+       }
     }
 
 

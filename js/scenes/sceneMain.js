@@ -15,8 +15,6 @@ class SceneMain extends Phaser.Scene {
         this.load.json({key:"academyData",
                         url:"js/data/academy.json"});
     
-
-        
     }
     create() {
         
@@ -31,6 +29,9 @@ class SceneMain extends Phaser.Scene {
             Art&music, animations 
 
         */
+        
+        
+       
 
         //process event data
         var academyData = this.cache.json.get("academyData");
@@ -38,6 +39,13 @@ class SceneMain extends Phaser.Scene {
 
 		emitter= new Phaser.Events.EventEmitter();
         controller = new Controller();
+
+        controller.gameTimer = new GameTimer(this);
+        console.log("game timer");
+        console.log(controller.gameTimer);
+        
+        model.progRate = 1; //test
+
 
         model.progress=0;
         //console.log(model.progress);
@@ -66,16 +74,13 @@ class SceneMain extends Phaser.Scene {
         emitter.on("button_pressed",this.buttonPressed,this);
 
         var testEvent = model.eventManager.deployNextEvent();
-        console.log("event on scenemain");
-        console.log(testEvent);
+
         var temp = new EventBox({scene:this, event:testEvent});
 
     }
     buttonPressed(params)
     {
-        console.log("ayyyy");
-        console.log(params);
-		if(params == "dig"){
+		if(params == "dig" && controller.gameTimer.status == "on"){
 			emitter.emit(G.MODIFY_PROGRESS,1);
 		}
 
@@ -87,5 +92,8 @@ class SceneMain extends Phaser.Scene {
     }
     update() {
         // constant running loop
+    }
+    onEvent(){ //test
+        emitter.emit(G.MODIFY_PROGRESS,model.progRate);
     }
 }

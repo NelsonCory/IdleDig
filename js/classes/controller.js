@@ -17,8 +17,15 @@ class Controller
         //accept event
         emitter.on(G.CHOICE_MADE,this.choicemade);
 
+        this.gameTimer;
 
-
+    }
+    pausetimers(){
+        console.log(this.gameTimer);
+        this.gameTimer.pauseTimers();
+    }
+    starttimers(){
+        this.gameTimer.startTimers();
     }
     setinfluence(influence){
         model.influence = influence;

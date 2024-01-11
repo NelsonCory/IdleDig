@@ -5,16 +5,16 @@ class EventManager{
         this.allEvents = new Map(); // all events loaded by game
     }
     addEvent(event){
-        console.log("add event to queue");
-        console.log(event);
+       // console.log("add event to queue");
+        //console.log(event);
         this.eventArr.push(event);
     }
     deployNextEvent(){
         if(this.eventArr.length>0){
             var nextEvent = this.eventArr.pop();
             //console.log("next");
-            console.log("deploy");
-            console.log(nextEvent);
+            //console.log("deploy");
+           // console.log(nextEvent);
             return nextEvent;
         }
     }
@@ -29,12 +29,12 @@ class EventManager{
                                 data.events[i].eventChoices
                                         ));
         }
-        console.log("map");
-        console.log(this.allEvents.get(0));
+       // console.log("map");
+       // console.log(this.allEvents.get(0));
         this.addEvent(this.allEvents.get(0)); //debug
     }
     queueNextEvent(eventID){
         this.addEvent(this.allEvents.get(eventID));
-        console.log("Next Event will be: "+ eventID);
+       // console.log("Next Event will be: "+ eventID);
     }
 }

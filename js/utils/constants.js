@@ -29,6 +29,9 @@ class Constants
         this.KNOWLEDGE_UPDATED="knowledgeupdated";
 
         this.CHOICE_MADE="choicemade";
+
+        this.PAUSE_TIMERS="pausetimers";
+        this.START_TIMERS="starttimers";
     }
 
 }
