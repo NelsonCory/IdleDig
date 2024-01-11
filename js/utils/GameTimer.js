@@ -5,26 +5,23 @@ class GameTimer{
         this.status = "on";
         
         this.EventTimer = this.scene.time.addEvent({
-                    delay: 30000,                // ms
+                    delay: 1000,                // ms 30000
                     callback: this.onEventFire,
+                    callbackScope: this,
                     loop: true,
                     paused: false, 
             });
         this.IncrementTimer = this.scene.time.addEvent({
                 delay: 1000,                // ms
                 callback: this.onIncrementFire,
+                callbackScope: this,
                 loop: true,
                 paused:false
         });
 
     }
-    onEventFire(){
-        console.log("event fire triggered");
-    }
-    onIncrementFire(){
-        //increase progress by prograte
-        console.log("prog triggered");
-        emitter.emit(G.MODIFY_PROGRESS,model.progRate);
+    testFunction(){
+        console.log("this works somehow");
     }
     pauseTimers(){
         console.log("pause triggered");
@@ -32,12 +29,33 @@ class GameTimer{
         this.IncrementTimer.paused = true;
         this.status="off";
     }
+
+    onIncrementFire(){
+        //increase progress by prograte
+        console.log("prog triggered");
+        emitter.emit(G.MODIFY_PROGRESS,model.progRate);
+    }
+
     startTimers(){
         console.log("unpause timers");
         //reset EventTimer?
         this.EventTimer.paused = false;
         this.IncrementTimer.paused = false;
         this.status="on";
+    }
+    onEventFire(){
+        
+        console.log("event fire triggered");
+       
+        var nextEvent = model.eventManager.deployNextEvent();
+        console.log("Next Event" + nextEvent);
+        if(nextEvent){
+            var temp = new EventBox({scene:this.scene, event:nextEvent});
+            this.pauseTimers();
+        }
+
+        
+
     }
 
 }

@@ -39,14 +39,9 @@ class SceneMain extends Phaser.Scene {
 
 		emitter= new Phaser.Events.EventEmitter();
         controller = new Controller();
-
         controller.gameTimer = new GameTimer(this);
-        console.log("game timer");
-        console.log(controller.gameTimer);
         
         model.progRate = 1; //test
-
-
         model.progress=0;
         //console.log(model.progress);
         
