@@ -1,3 +1,12 @@
+/*
+    Event Convention
+        0-99 DEBUG
+        100-199 THE ACADEMY
+        200-299 THE DRAGON
+        300-399 THE TYRANT
+        900-999 RANDOM EVENTS
+*/
+
 class EventManager{
     constructor()
     {
@@ -7,7 +16,10 @@ class EventManager{
     addEvent(event){
        // console.log("add event to queue");
         //console.log(event);
+        console.log("addEvent");
+        console.log(event);
         this.eventArr.push(event);
+        console.log(this.eventArr);
     }
     deployNextEvent(){
         if(this.eventArr.length>0){
@@ -31,9 +43,12 @@ class EventManager{
         }
        // console.log("map");
        // console.log(this.allEvents.get(0));
-        this.addEvent(this.allEvents.get(0)); //debug
+        //this.addEvent(this.allEvents.get(data)); //debug
     }
     queueNextEvent(eventID){
+        console.log("queueing");
+        console.log(this.allEvents.get(eventID))
+
         this.addEvent(this.allEvents.get(eventID));
        // console.log("Next Event will be: "+ eventID);
     }

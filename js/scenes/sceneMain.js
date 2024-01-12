@@ -21,27 +21,28 @@ class SceneMain extends Phaser.Scene {
         /*
         TODO
             Fundamental
-                Implement Timer (https://rexrainbow.github.io/phaser3-rex-notes/docs/site/timer/)
-                    - timer based on progRate
                 Finish event system
             Develop events for questlines as well as random events
 
             Art&music, animations 
 
         */
-        
-        
        
-
+        //https://phaser.io/examples/v3/view/game-objects/text/word-wrap-by-width
         //process event data
         var academyData = this.cache.json.get("academyData");
         model.eventManager.loadEvents(academyData);
+        model.eventManager.queueNextEvent(100);
+
+        //var temp = new EventBox({scene:this, event:testEvent});
+
 
 		emitter= new Phaser.Events.EventEmitter();
         controller = new Controller();
         controller.gameTimer = new GameTimer(this);
         
-        model.progRate = 1; //test
+        //initialize events
+
         model.progress=0;
         //console.log(model.progress);
         
@@ -68,9 +69,9 @@ class SceneMain extends Phaser.Scene {
 		//initialize emitters
         emitter.on("button_pressed",this.buttonPressed,this);
 
-        var testEvent = model.eventManager.deployNextEvent();
+        
 
-        var temp = new EventBox({scene:this, event:testEvent});
+        
 
     }
     buttonPressed(params)

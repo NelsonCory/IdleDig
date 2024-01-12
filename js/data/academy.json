@@ -50,6 +50,183 @@
                             "knowledgeChange":1
                         }}
                     ]
+                },
+                {   "eventID":100,
+                "eventName": "Patron: The Academy",
+                "eventImage":"testImage",
+                "eventText":"The academy welcomes its newest member, and is interested in your progress so far. A modest donation now may demonstrate the value of your work at this site.",
+                "eventChoices":
+                    [
+                        {"text":"The Academy will appreciate this, right?",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": -5,
+                                "influenceChange": 0,
+                                "knowledgeChange": 5,
+                                "nextEvent": 101
+                            }
+                        },
+                        {"text":"We cannot acfford to donate at this time.",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 0,
+                            "influenceChange":0,
+                            "knowledgeChange":0,
+                            "nextEvent": 102
+                        }}
+                    ]
+                },
+                {   "eventID":101,
+                "eventName": "Knowledge for its own sake",
+                "eventImage":"testImage",
+                "eventText":"The academy is pleased with your donation, however some magisters whisper that they should best manage this project in your place.",
+                "eventChoices":
+                    [
+                        {"text":"A greater donation may ease the tension",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": -10,
+                                "influenceChange": 0,
+                                "knowledgeChange": 10,
+                                "nextEvent": 103
+                            }
+                        },
+                        {"text":"We cannot afford to donate at this time.",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 0,
+                            "influenceChange": 0,
+                            "knowledgeChange": 0,
+                            "nextEvent": 104
+                        }}
+                    ]
+                },
+                {   "eventID":102,
+                "eventName": "Eyes on You",
+                "eventImage":"testImage",
+                "eventText":"The academy has invested much time in this project. Some amongst the Magisters are eager to attach themselves to such a promising project.",
+                "eventChoices":
+                    [
+                        {"text":"Accept their aid.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 1,
+                                "artifactChange": -10,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0,
+                                "nextEvent": 104
+                            }
+                        },
+                        {"text":"Reject, they only seek their own benefit",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 0,
+                            "influenceChange":0,
+                            "knowledgeChange":10,
+                            "nextEvent": 105
+                        }}
+                    ]
+                },
+                {   "eventID":103,
+                "eventName": "Burned by Ambition",
+                "eventImage":"testImage",
+                "eventText":"The Magisters view your early success with curiosity, but doubt your experience. The academy may be thainkful for your service, but do not count on their support.",
+                "eventChoices":
+                    [
+                        {"text":"The young surpass the old.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 10,
+                                "knowledgeChange": 5
+                            }
+                        }
+                    ]
+                },
+                {   "eventID":104,
+                "eventName": "The Grand Exhibition",
+                "eventImage":"testImage",
+                "eventText":"The Academy gathers once a year to celebrate the work of its scholars. This is your chance to show yourself worthy to stand amongst the Magisters.",
+                "eventChoices":
+                    [
+                        {"text":"We will show all that we have learned",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0,
+                                "nextEvent": 106
+                            }
+                        },
+                        {"text":"We will have to decline",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 0,
+                            "influenceChange":0,
+                            "knowledgeChange":1,
+                            "nextEvent": 107
+                        }}
+                    ]
+                },
+                {   "eventID":105,
+                "eventName": "Academic Pariah",
+                "eventImage":"testImage",
+                "eventText":"Refusing the aid of the Magisters has left a bad impression on potential allies in the Academy. Without their aid, you will never be a part of their inner circle.",
+                "eventChoices":
+                    [
+                        {"text":"A chance to study in peace...",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 1,
+                                "knowledgeChange": 15
+                            }
+                        }
+                    ]
+                },
+                {   "eventID":106,
+                "eventName": "Among Equals",
+                "eventImage":"testImage",
+                "eventText":"Your efforts have been recognized by The Academy. You have been inducted formally as a custodian of history. Congradulations are in order, Magister.",
+                "eventChoices":
+                    [
+                        {"text":"Now, the real work begins.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 1,
+                                "knowledgeChange": 50
+                            }
+                        }
+                        
+                    ]
+                },
+                {   "eventID":107,
+                "eventName": "No Institutional Support",
+                "eventImage":"testImage",
+                "eventText":"Refusal to participate in the Grand Exhibition has set you apart from your peers. Your allies amongst the Magisters feel they have lost face by supporting you. You may never have the Academy's full support, but your allies have invested too much to let you go now.",
+                "eventChoices":
+                    [
+                        {"text":"Perhaps they will join our mission?",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 2,
+                                "artifactChange": 0,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0
+                            }
+                        }
+                    ]
                 }
     ]
 

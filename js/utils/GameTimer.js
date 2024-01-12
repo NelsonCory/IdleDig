@@ -5,7 +5,7 @@ class GameTimer{
         this.status = "on";
         
         this.EventTimer = this.scene.time.addEvent({
-                    delay: 1000,                // ms 30000
+                    delay: 2000,                // ms 30000
                     callback: this.onEventFire,
                     callbackScope: this,
                     loop: true,
@@ -33,6 +33,7 @@ class GameTimer{
     onIncrementFire(){
         //increase progress by prograte
         console.log("prog triggered");
+        console.log(model.progRate);
         emitter.emit(G.MODIFY_PROGRESS,model.progRate);
     }
 
@@ -46,9 +47,9 @@ class GameTimer{
     onEventFire(){
         
         console.log("event fire triggered");
-       
+        console.log(model.eventManager.eventArr);
         var nextEvent = model.eventManager.deployNextEvent();
-        console.log("Next Event" + nextEvent);
+        console.log(nextEvent);
         if(nextEvent){
             var temp = new EventBox({scene:this.scene, event:nextEvent});
             this.pauseTimers();
