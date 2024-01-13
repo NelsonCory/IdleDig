@@ -2,7 +2,7 @@
     "events":[
             {   "eventID":300,
                 "eventName": "A Living Legend",
-                "eventImage":"testImage",
+                "eventImage":"wyrmImage",
                 "eventText":"You are brought a stunning report. A great drake has made its lair in the surrounding countryside. To it, you are an intruder, a pest in its domain.",
                 "eventChoices":
                     [
@@ -29,7 +29,7 @@
                 },
                 {   "eventID":301,
                 "eventName": "Patron: The Wyrm",
-                "eventImage":"testImage",
+                "eventImage":"wyrmImage",
                 "eventText":"The Beast swooped in with a massive show of force, scattering workers in every direction. Each flap of its wings destroying hours of work. When the chaos ends, you discover the damage was precise. Superficial. A message.",
                 "eventChoices":
                     [
@@ -56,7 +56,7 @@
                 },
                 {   "eventID":302,
                 "eventName": "The Beast's Favor",
-                "eventImage":"testImage",
+                "eventImage":"wyrmImage",
                 "eventText":"You are greeted by the Wyrm's servants. Small, diminutive creates known as kobolds. They come bearing pickaxes and shovels.",
                 "eventChoices":
                     [
@@ -74,11 +74,11 @@
                 },
                 {   "eventID":303,
                 "eventName": "The Price of Defiance",
-                "eventImage":"testImage",
+                "eventImage":"wyrmImage",
                 "eventText":"It came at night, burning. The fires left the camp in ruins. The earth was picked clean by thieving hands. In the morning light, you assess the damage.",
                 "eventChoices":
                     [
-                        {"text":"A tragic loss, but the price is paid.",
+                        {"text":"A tragic loss, but the price is paid. [-100 Artifacts]",
                             "results":{
                                 "progChange": 0,
                                 "progRateChange": 0,
@@ -92,7 +92,7 @@
                 },
                 {   "eventID":304,
                 "eventName": "The Wyrm's Domain",
-                "eventImage":"testImage",
+                "eventImage":"wyrmImage",
                 "eventText":"To live in the shadows of giants is taxing on your health. A simple digsite has become a tug of war between different interests. And still, the Beast imposes its will on the land.",
                 "eventChoices":
                     [
@@ -110,7 +110,7 @@
                 },
                 {   "eventID":305,
                 "eventName": "The Beast and You",
-                "eventImage":"testImage",
+                "eventImage":"wyrmImage",
                 "eventText":"This uneasy peace is coming to an end. You have overstayed your welcome, and the Wyrm is coming for you.",
                 "eventChoices":
                     [
@@ -138,7 +138,7 @@
                 },
                 {   "eventID":306,
                 "eventName": "The Beast Slumbers",
-                "eventImage":"testImage",
+                "eventImage":"wyrmImage",
                 "eventText":"Since your recent tribute the great drake has not been seen. Reports from nearby villages report their livestock goes unpreyed and caravans move freely. You know better, though. Something stirs beneath the earth.",
                 "eventChoices":
                     [
@@ -155,7 +155,7 @@
                 },
                 {   "eventID":307,
                 "eventName": "The Legend Grows",
-                "eventImage":"testImage",
+                "eventImage":"wyrmImage",
                 "eventText":"The hills have been ravaged by the battle between your Hunter and the Beast. The once verdant horizon is charred black. The Hunter never came home, and travellers fear open skies.",
                 "eventChoices":
                     [

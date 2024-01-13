@@ -4,8 +4,11 @@ class InfluenceBox extends Phaser.GameObjects.Container
     {
         super(config.scene);
         this.scene = config.scene;
+        this.key = config.key;
 
-        this.text1 = this.scene.add.text(0,0,"Influence: 0");
+        this.icon = this.scene.add.image(Math.floor(game.config.width*0.15),Math.floor(game.config.height*0.05),config.key);
+        this.icon.setOrigin(0.5,0.5);
+        this.text1 = this.scene.add.text(this.icon.x-25,this.icon.y-25,"0");
         this.text1.setOrigin(0.5,0.5);
         this.add(this.text1);
 
@@ -15,8 +18,7 @@ class InfluenceBox extends Phaser.GameObjects.Container
         
     }
     influenceUpdated(){
-        this.text1.setText("Influence: "+ model.influence);
-        console.log("influence updated");
+        this.text1.setText(model.influence);
     }
 
 }

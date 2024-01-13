@@ -5,8 +5,11 @@ class ArtifactBox extends Phaser.GameObjects.Container
         super(config.scene);
         this.scene = config.scene;
 
-        this.text1 = this.scene.add.text(0,0,"Artifacts: 0");
-        this.text1.setOrigin(0.5,0.5);
+        this.key = config.key;
+        this.icon = this.scene.add.image(Math.floor(game.config.width*0.5),Math.floor(game.config.height*0.05),config.key);
+
+        this.text1 = this.scene.add.text(25,0,"0");
+        //this.text1.setOrigin(0.5,0.5);
         this.add(this.text1);
 
         this.scene.add.existing(this);
@@ -15,7 +18,7 @@ class ArtifactBox extends Phaser.GameObjects.Container
         
     }
     artifactUpdated(){
-        this.text1.setText("Artifacts: "+ model.artifact);
+        this.text1.setText(model.artifact);
     }
 
 }

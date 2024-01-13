@@ -25,6 +25,9 @@ class FlatButton extends Phaser.GameObjects.Container
 
         this.add(this.back);
         
+        //button animations
+        
+
         if (config.text)
         {
             //console.log("config.text");
@@ -45,6 +48,8 @@ class FlatButton extends Phaser.GameObjects.Container
         }
         if (config.y){
             this.y=config.y;
+            this.pos1 = this.y;
+            this.pos2 = this.y+5;
         }
         if (config.event){
             this.back.setInteractive();
@@ -53,6 +58,10 @@ class FlatButton extends Phaser.GameObjects.Container
         if(model.isMobile == -1){
             this.back.on("pointerover",this.over,this);
             this.back.on("pointerout",this.out,this);
+        }
+        else{
+            //this.back.on("pointerover",this.over,this);
+            //this.back.on("pointerout",this.out,this);
         }
 
         this.buttonActive = false;
@@ -70,17 +79,26 @@ class FlatButton extends Phaser.GameObjects.Container
     }
     over()
     {
-        this.y -=5;
+        this.y = this.pos1;
     }
     out()
     {
-        this.y +=5;
+        this.y = this.pos2;
     }
     activateButton(){
         console.log("button activated");
         this.buttonActive = true;
     }
+    togglePos(){
+        if (this.y == this.pos1){
+            this.y = this.pos2;
+        }
+        else{
+            this.y = this.pos1;
+        }
+    }
     pressed(){
+        this.togglePos();
         if (this.config.params){
             //console.log("outputting params on press");
             //console.log(this.config.params);

@@ -2,7 +2,7 @@
     "events":[
             {   "eventID":900,
                 "eventName": "Crown of the Last King",
-                "eventImage":"testImage",
+                "eventImage":"randomImage",
                 "eventText":"Early in the morning, you discover a highly dangerous relic. This crown of the old king is symbol of the old world, and is a symbolic threat to the new regime. What do you do?",
                 "eventChoices":
                     [
@@ -27,7 +27,7 @@
                 },
                 {   "eventID":901,
                 "eventName": "Maul of the Dragonkin",
-                "eventImage":"testImage",
+                "eventImage":"randomImage",
                 "eventText":"You have unearthed an artifact dating to the Age of Dragons! Engraved on this weapon are the names of many great beasts. You recognize one name, perhaps it would appreciate your tribute?",
                 "eventChoices":
                     [
@@ -52,7 +52,7 @@
                 },
                 {   "eventID":902,
                 "eventName": "Shard of Truth",
-                "eventImage":"testImage",
+                "eventImage":"randomImage",
                 "eventText":"You thought the day may end with no major progress, until this artifact was caught in the light of the setting sun, peaking out of the soil. It's so beautiful. It's so beautiful...",
                 "eventChoices":
                     [
@@ -69,7 +69,7 @@
                 },
                 {   "eventID":903,
                 "eventName": "An Unexpected Meeting",
-                "eventImage":"testImage",
+                "eventImage":"randomImage",
                 "eventText":"What brought you here? The pursuit of knowledge? Power? Just to collect trinkets? You are your own worst enemy.",
                 "eventChoices":
                     [
@@ -86,11 +86,11 @@
                 },
                 {   "eventID":904,
                 "eventName": "Comet Sighted!",
-                "eventImage":"testImage",
+                "eventImage":"randomImage",
                 "eventText":"The supersitious among your workers whisper of bad omens. An offering to a higher power may be in order.",
                 "eventChoices":
                     [
-                        {"text":"The Stars Demand Much.",
+                        {"text":"The Stars Demand Much.[-5 Artifacts]",
                             "results":{
                                 "progChange": 0,
                                 "progRateChange": 0,
@@ -111,7 +111,7 @@
                 },
                 {   "eventID":905,
                 "eventName": "The Coffin",
-                "eventImage":"testImage",
+                "eventImage":"randomImage",
                 "eventText":"Within is the husk of a nobleman, adorned in jewelry and wrapped in scriptures. You can still make out the markings of his House. What to do with this specimen?",
                 "eventChoices":
                     [
@@ -136,7 +136,7 @@
                 },
                 {   "eventID":906,
                 "eventName": "The Pit",
-                "eventImage":"testImage",
+                "eventImage":"randomImage",
                 "eventText":"A breakthrough! But, something is wrong. The smell is suffocating. And the Heat?! In the darkness, something looks back. Waiting. What is it?",
                 "eventChoices":
                     [
@@ -161,7 +161,7 @@
                 },
                 {   "eventID":907,
                 "eventName": "The Aeolipile",
-                "eventImage":"testImage",
+                "eventImage":"randomImage",
                 "eventText":"Marvelous! A rudimentary device, but in pristine condition! Quite valuable to the right collector, but perhaps that collector is yourself?",
                 "eventChoices":
                     [

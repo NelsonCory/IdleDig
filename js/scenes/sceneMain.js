@@ -9,8 +9,22 @@ class SceneMain extends Phaser.Scene {
         this.load.image("digger","assets/mr-dig.png");
         this.load.image("eventBack","assets/eventBackground.png");
         this.load.image("testImage","assets/testImage.png");
+        this.load.image("academyImage","assets/academyImage.png");
+        this.load.image("wyrmImage","assets/wyrmImage.png");
+        this.load.image("despotImage","assets/despotImage.png");
+        this.load.image("randomImage","assets/randomImage.png");
+
         this.load.image("choiceButton","assets/choiceButton.png");
-    
+        this.load.image("influenceIcon","assets/influenceIcon.png");
+        this.load.image("artifactIcon","assets/artifactIcon.png");
+        this.load.image("knowledgeIcon","assets/knowledgeIcon.png");
+        this.load.image("sceneBackground","assets/sceneBackground.png");
+
+        
+        
+        
+
+
         //load data
         this.load.json({key:"academyData",
                         url:"js/data/academy.json"});
@@ -25,6 +39,10 @@ class SceneMain extends Phaser.Scene {
         
         //var temp = new EventBox({scene:this, event:testEvent});
 
+        var background = this.add.image(game.config.width/2,game.config.height/2,"sceneBackground");
+        background.setOrigin(0.5,0.5)
+        background.scaleX = game.config.width/background.width;
+        background.scaleY = game.config.height/background.height;
 
         //prepare model with quests & random events
         this.initializeQuests()
@@ -39,14 +57,16 @@ class SceneMain extends Phaser.Scene {
         //console.log(model.progress);
         
 		//should scale based on button size
-        var flatButton = new FlatButton({scene:this, key:"button1",x:game.config.width/2,y:game.config.height - 100, event:'button_pressed',params:"dig"});
+        var flatButton = new FlatButton({scene:this, key:"button1",x:game.config.width/2,y: Math.floor(game.config.height*0.8), event:'button_pressed',params:"dig"});
 		var digger = this.add.image(game.config.width/2,game.config.height/2,"digger");
+        digger.scaleX = 1.2;
+        digger.scaleY = 1.2;
 
         //create incremental boxes
         this.pb = new ProgressBox({scene:this});
-        this.ab = new ArtifactBox({scene:this});
-        this.ib = new InfluenceBox({scene:this});
-        this.kb = new KnowledgeBox({scene:this});
+        this.ab = new ArtifactBox({scene:this, key:"artifactIcon"});
+        this.ib = new InfluenceBox({scene:this,key:"influenceIcon"});
+        this.kb = new KnowledgeBox({scene:this,key:"knowledgeIcon"});
 
 		//initialize placement of UI elements
 		var gridConfig = {rows:11,cols:11,scene:this};
@@ -56,7 +76,7 @@ class SceneMain extends Phaser.Scene {
         this.alignGrid.placeAtIndex(1,this.ib);
         this.alignGrid.placeAtIndex(5,this.ab);
         this.alignGrid.placeAtIndex(9,this.kb);
-        this.alignGrid.placeAtIndex(49,digger);
+        this.alignGrid.placeAtIndex(71,digger);
 		//this.alignGrid.placeAtIndex(104,this.flatButton);
 		//initialize emitters
         emitter.on("button_pressed",this.buttonPressed,this);
@@ -75,7 +95,7 @@ class SceneMain extends Phaser.Scene {
 
     }
     update() {
-        if(model.artifact < 0){ // game over
+        if(model.artifact < 0 || model.eventManager.eventArr.length == 0){ // game over
             this.scene.start("SceneGameOver");
         }
     }
