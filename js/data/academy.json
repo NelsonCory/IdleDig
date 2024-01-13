@@ -67,7 +67,7 @@
                                 "nextEvent": 101
                             }
                         },
-                        {"text":"We cannot acfford to donate at this time.",
+                        {"text":"We cannot afford to donate at this time.",
                         "results":{
                             "progChange": 0,
                             "progRateChange": 0,
@@ -81,7 +81,7 @@
                 {   "eventID":101,
                 "eventName": "Knowledge for its own sake",
                 "eventImage":"testImage",
-                "eventText":"The academy is pleased with your donation, however some magisters whisper that they should best manage this project in your place.",
+                "eventText":"The academy is pleased with your donation, however some magisters whisper that they would best manage this project in your place.",
                 "eventChoices":
                     [
                         {"text":"A greater donation may ease the tension",
@@ -135,7 +135,7 @@
                 {   "eventID":103,
                 "eventName": "Burned by Ambition",
                 "eventImage":"testImage",
-                "eventText":"The Magisters view your early success with curiosity, but doubt your experience. The academy may be thainkful for your service, but do not count on their support.",
+                "eventText":"The Magisters view your early success with curiosity, but doubt your experience. The academy may be thankful for your service, but do not count on their support.",
                 "eventChoices":
                     [
                         {"text":"The young surpass the old.",
@@ -196,7 +196,7 @@
                 {   "eventID":106,
                 "eventName": "Among Equals",
                 "eventImage":"testImage",
-                "eventText":"Your efforts have been recognized by The Academy. You have been inducted formally as a custodian of history. Congradulations are in order, Magister.",
+                "eventText":"Your efforts have been recognized by The Academy. You have been inducted formally as a custodian of history. Congratulations are in order, Magister.",
                 "eventChoices":
                     [
                         {"text":"Now, the real work begins.",

@@ -17,11 +17,14 @@ class FlatButton extends Phaser.GameObjects.Container
         this.config=config;
         this.scene=config.scene;
         this.back = this.scene.add.image(0,0,config.key);
+        if(config.key == "choiceButton"){
+            console.log("choice button created");
+            this.back.displayWidth = game.config.width*0.7;
+            this.back.scaleY = this.back.scaleX;
+        }
+
         this.add(this.back);
         
-        //console.log(this.config);
-       // console.log("button params");
-        //console.log(this.config.params)
         if (config.text)
         {
             //console.log("config.text");

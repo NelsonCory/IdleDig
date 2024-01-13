@@ -3,7 +3,7 @@ class Model
     constructor()
     {
         this._progress=0;
-        this._progRate=1; // prog per second
+        this._progRate=0; // prog per second
         this._progGoal=10;
         this._artifact = 0;
         this._influence = 0;

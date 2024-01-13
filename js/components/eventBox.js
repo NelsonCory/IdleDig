@@ -18,7 +18,7 @@ class EventBox extends Phaser.GameObjects.Container{
         this.eventImage = this.scene.add.image(this.eventBack.x,Math.floor(this.eventBack.height*0.5),this.event.eventImage);
 
 
-        this.eventText = this.scene.add.text(this.eventBack.x,Math.floor(this.eventBack.height*0.7),this.event.eventText);
+        this.eventText = this.scene.add.text(this.eventBack.x,Math.floor(this.eventBack.height*0.75),this.event.eventText, { fontFamily: 'Arial', fontSize: 15, color: 'black',wordWrap: { width: this.eventBack.width - 25 } });
         this.eventText.setOrigin(0.5,0.5);
         
         // var flatButton = new FlatButton({scene:this, key:"button1",x:game.config.width/2,y:game.config.height - 100, event:'button_pressed',params:"dig"});
@@ -42,9 +42,10 @@ class EventBox extends Phaser.GameObjects.Container{
             console.log(this.event.eventChoices[i]);
             console.log(this.event.eventChoices[i].results);
             */
-            this.buttonList[i] = new FlatButton({scene:this.scene,key:"choiceButton",x:this.eventBack.x,y:Math.floor(this.eventBack.height*0.8)+50*i,
+           //{ fontFamily: 'Arial', fontSize: 15, color: 'black',wordWrap: { width: this.eventBack.width - 25 }
+            this.buttonList[i] = new FlatButton({scene:this.scene,key:"choiceButton",x:this.eventBack.x,y:Math.floor(this.eventBack.height*0.92)+60*i,
                                                         params:this.event.eventChoices[i].results,text:this.event.eventChoices[i].text,
-                                                        textConfig:{color:"black"},event:"button_pressed"});
+                                                        textConfig:{color:"black", fontSize: 15, wordWrap: { width: this.eventBack.width - 25 }},event:"button_pressed"});
             this.add(this.buttonList[i]);
         }
         controller.gameTimer.pauseTimers();

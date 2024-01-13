@@ -1,0 +1,188 @@
+{
+    "events":[
+            {   "eventID":900,
+                "eventName": "Crown of the Last King",
+                "eventImage":"testImage",
+                "eventText":"Early in the morning, you discover a highly dangerous relic. This crown of the old king is symbol of the old world, and is a symbolic threat to the new regime. What do you do?",
+                "eventChoices":
+                    [
+                        {"text":"Dispose of it. The Despot rules eternal.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 1,
+                                "knowledgeChange": 0
+                            }
+                        },
+                        {"text":"We must tell the world!",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 0,
+                            "influenceChange":0,
+                            "knowledgeChange":5
+                        }}
+                    ]
+                },
+                {   "eventID":901,
+                "eventName": "Maul of the Dragonkin",
+                "eventImage":"testImage",
+                "eventText":"You have unearthed an artifact dating to the Age of Dragons! Engraved on this weapon are the names of many great beasts. You recognize one name, perhaps it would appreciate your tribute?",
+                "eventChoices":
+                    [
+                        {"text":"A gift to the Wyrm.",
+                            "results":{
+                                "progChange": 1,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 5,
+                                "knowledgeChange": 5
+                            }
+                        },
+                        {"text":"It belongs in a museum!",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 10,
+                            "influenceChange":0,
+                            "knowledgeChange":5
+                        }}
+                    ]
+                },
+                {   "eventID":902,
+                "eventName": "Shard of Truth",
+                "eventImage":"testImage",
+                "eventText":"You thought the day may end with no major progress, until this artifact was caught in the light of the setting sun, peaking out of the soil. It's so beautiful. It's so beautiful...",
+                "eventChoices":
+                    [
+                        {"text":"What is the price of truth?",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0
+                            }
+                        }
+                    ]
+                },
+                {   "eventID":903,
+                "eventName": "An Unexpected Meeting",
+                "eventImage":"testImage",
+                "eventText":"What brought you here? The pursuit of knowledge? Power? Just to collect trinkets? You are your own worst enemy.",
+                "eventChoices":
+                    [
+                        {"text":"But we Persist.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0
+                            }
+                        }
+                    ]
+                },
+                {   "eventID":904,
+                "eventName": "Comet Sighted!",
+                "eventImage":"testImage",
+                "eventText":"The supersitious among your workers whisper of bad omens. An offering to a higher power may be in order.",
+                "eventChoices":
+                    [
+                        {"text":"The Stars Demand Much.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": -5,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0
+                            }
+                        },
+                        {"text":"We are Scholars, not Cowards.",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 0,
+                            "influenceChange":0,
+                            "knowledgeChange":0
+                        }}
+                    ]
+                },
+                {   "eventID":905,
+                "eventName": "The Coffin",
+                "eventImage":"testImage",
+                "eventText":"Within is the husk of a nobleman, adorned in jewelry and wrapped in scriptures. You can still make out the markings of his House. What to do with this specimen?",
+                "eventChoices":
+                    [
+                        {"text":"Return him to his family.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 5,
+                                "knowledgeChange": 0
+                            }
+                        },
+                        {"text":"A fine addition to my collection.",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 10,
+                            "influenceChange":0,
+                            "knowledgeChange":0
+                        }}
+                    ]
+                },
+                {   "eventID":906,
+                "eventName": "The Pit",
+                "eventImage":"testImage",
+                "eventText":"A breakthrough! But, something is wrong. The smell is suffocating. And the Heat?! In the darkness, something looks back. Waiting. What is it?",
+                "eventChoices":
+                    [
+                        {"text":"A way out.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 0,
+                                "knowledgeChange": 5
+                            }
+                        },
+                        {"text":"A distraction.",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 5,
+                            "influenceChange":0,
+                            "knowledgeChange":0
+                        }}
+                    ]
+                },
+                {   "eventID":907,
+                "eventName": "The Aeolipile",
+                "eventImage":"testImage",
+                "eventText":"Marvelous! A rudimentary device, but in pristine condition! Quite valuable to the right collector, but perhaps that collector is yourself?",
+                "eventChoices":
+                    [
+                        {"text":"For my friends in the Academy.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 5,
+                                "knowledgeChange": 5
+                            }
+                        },
+                        {"text":"Another trinket for my collection.",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 10,
+                            "influenceChange":0,
+                            "knowledgeChange":0
+                        }}
+                    ]
+                }
+    ]
+}
