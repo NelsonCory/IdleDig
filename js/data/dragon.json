@@ -30,7 +30,7 @@
                 {   "eventID":301,
                 "eventName": "Patron: The Wyrm",
                 "eventImage":"testImage",
-                "eventText":"The Beast swooped in with a massive show of force, scattering workers in e very direction. Each flap of its wings destroying hours of work. When the chaos ends, you discover the damage was precise. Superficial. A message.",
+                "eventText":"The Beast swooped in with a massive show of force, scattering workers in every direction. Each flap of its wings destroying hours of work. When the chaos ends, you discover the damage was precise. Superficial. A message.",
                 "eventChoices":
                     [
                         {"text":"We must provide tribute. [-20 Artifacts]",

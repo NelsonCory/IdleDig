@@ -16,7 +16,7 @@ window.onload=function()
             width: 480,
             height: 640,
             parent: 'phaser-game',
-            scene: [SceneMain]
+            scene: [SceneMain,SceneGameOver]
         };
     }
     else{
@@ -25,7 +25,7 @@ window.onload=function()
             width: window.innerWidth,
             height: window.innerHeight,
             parent: 'phaser-game',
-            scene: [SceneMain]
+            scene: [SceneMain,SceneGameOver]
         };
     }
     G = new Constants();

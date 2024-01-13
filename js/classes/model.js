@@ -8,6 +8,7 @@ class Model
         this._artifact = 0;
         this._influence = 0;
         this._knowledge = 0;
+        this.readyToPress = false;
         this.eventManager = new EventManager();
     }
     //implement knowledge and influence

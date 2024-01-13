@@ -49,7 +49,7 @@ class EventBox extends Phaser.GameObjects.Container{
             this.add(this.buttonList[i]);
         }
         controller.gameTimer.pauseTimers();
-        emitter.on("button_pressed",this.buttonPressed,this);
+        emitter.on(G.CHOICE_MADE,this.buttonPressed,this); //CHANGED FROM BUTTON_PRESS
 
         this.scene.add.existing(this);
     }

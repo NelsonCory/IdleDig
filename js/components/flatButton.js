@@ -55,6 +55,17 @@ class FlatButton extends Phaser.GameObjects.Container
             this.back.on("pointerout",this.out,this);
         }
 
+        this.buttonActive = false;
+
+        this.delayTimer = this.scene.time.addEvent({
+            delay: 1000,                // ms
+            callback: this.activateButton,
+            callbackScope: this,
+            loop: false,
+            paused:false
+    });
+
+
         this.scene.add.existing(this);
     }
     over()
@@ -65,11 +76,17 @@ class FlatButton extends Phaser.GameObjects.Container
     {
         this.y +=5;
     }
+    activateButton(){
+        console.log("button activated");
+        this.buttonActive = true;
+    }
     pressed(){
         if (this.config.params){
             //console.log("outputting params on press");
             //console.log(this.config.params);
-            emitter.emit(this.config.event, this.config.params);
+            if (this.buttonActive){
+                emitter.emit(this.config.event, this.config.params);
+            }
         }
         else{
             emitter.emit(this.config.event);

@@ -14,29 +14,21 @@ class SceneMain extends Phaser.Scene {
         //load data
         this.load.json({key:"academyData",
                         url:"js/data/academy.json"});
-    
+        this.load.json({key:"randomData",
+                        url:"js/data/random.json"});
+        this.load.json({key:"dragonData",
+                        url:"js/data/dragon.json"});
+         this.load.json({key:"tyrantData",
+                        url:"js/data/tyrant.json"});
     }
     create() {
         
-        /*
-        TODO
-            Fundamental
-                Finish event system
-            Develop events for questlines as well as random events
-
-            Art&music, animations 
-
-        */
-       
-        //https://phaser.io/examples/v3/view/game-objects/text/word-wrap-by-width
-        //process event data
-        var academyData = this.cache.json.get("academyData");
-        model.eventManager.loadEvents(academyData);
-        model.eventManager.queueNextEvent(100);
-
         //var temp = new EventBox({scene:this, event:testEvent});
 
 
+        //prepare model with quests & random events
+        this.initializeQuests()
+        
 		emitter= new Phaser.Events.EventEmitter();
         controller = new Controller();
         controller.gameTimer = new GameTimer(this);
@@ -68,28 +60,54 @@ class SceneMain extends Phaser.Scene {
 		//this.alignGrid.placeAtIndex(104,this.flatButton);
 		//initialize emitters
         emitter.on("button_pressed",this.buttonPressed,this);
-
-        
-
-        
-
     }
     buttonPressed(params)
     {
 		if(params == "dig" && controller.gameTimer.status == "on"){
 			emitter.emit(G.MODIFY_PROGRESS,1);
 		}
-
         //process choices
-        if(!(typeof myVar === 'string')){
-            console.log("params:" + params);
+
+        if(params.knowledgeChange >= 0 ){
+            console.log("here somehow");
             emitter.emit(G.CHOICE_MADE,params);
         }
+
     }
     update() {
-        // constant running loop
+        if(model.artifact < 0){ // game over
+            this.scene.start("SceneGameOver");
+        }
     }
     onEvent(){ //test
         emitter.emit(G.MODIFY_PROGRESS,model.progRate);
+    }
+    initializeQuests(){
+        var academyData = this.cache.json.get("academyData");
+        var dragonData = this.cache.json.get("dragonData");
+        var tyrantData = this.cache.json.get("tyrantData");
+        var randomData = this.cache.json.get("randomData");
+
+        model.eventManager.loadEvents(academyData);
+        model.eventManager.loadEvents(dragonData);
+        model.eventManager.loadEvents(tyrantData);
+        model.eventManager.loadEvents(randomData);
+        
+
+        //add first events to event queue
+        model.eventManager.queueNextEvent(100); // start Academy Questline
+        model.eventManager.queueNextEvent(200); // start Tyrant Questline
+        model.eventManager.queueNextEvent(300); // start Dragon Questline
+        
+        //add random events to queue. Ugly, but submissions end tonight for jam.
+        model.eventManager.queueNextEvent(900);
+        model.eventManager.queueNextEvent(901);
+        model.eventManager.queueNextEvent(902);
+        model.eventManager.queueNextEvent(903);
+        model.eventManager.queueNextEvent(904);
+        model.eventManager.queueNextEvent(905);
+        model.eventManager.queueNextEvent(906);
+        model.eventManager.queueNextEvent(907);
+
     }
 }

@@ -5,7 +5,7 @@ class GameTimer{
         this.status = "on";
         
         this.EventTimer = this.scene.time.addEvent({
-                    delay: 20000,                // ms 30000
+                    delay: 5000,                // ms 30000
                     callback: this.onEventFire,
                     callbackScope: this,
                     loop: true,
@@ -53,10 +53,13 @@ class GameTimer{
         if(nextEvent){
             var temp = new EventBox({scene:this.scene, event:nextEvent});
             this.pauseTimers();
+            setTimeout(()=>{ //(function, time)
+                
+                console.log("back in action");
+             },2000);
         }
-
-        
-
     }
+
+
 
 }

@@ -16,10 +16,7 @@ class EventManager{
     addEvent(event){
        // console.log("add event to queue");
         //console.log(event);
-        console.log("addEvent");
-        console.log(event);
         this.eventArr.push(event);
-        console.log(this.eventArr);
     }
     deployNextEvent(){
         if(this.eventArr.length>0){
@@ -51,5 +48,16 @@ class EventManager{
 
         this.addEvent(this.allEvents.get(eventID));
        // console.log("Next Event will be: "+ eventID);
+       this.shuffleArray(this.eventArr);
+       
     }
+    /* Randomize array in-place using Durstenfeld shuffle algorithm */
+    shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
 }
