@@ -1,54 +1,173 @@
 {
     "events":[
-            {   "eventID":4,
-                "eventName": "Debug Event",
+            {   "eventID":300,
+                "eventName": "A Living Legend",
                 "eventImage":"testImage",
-                "eventText":"Body of Event",
+                "eventText":"You are brought a stunning report. A great drake has made its lair in the surrounding countryside. To it, you are an intruder, a pest in its domain.",
                 "eventChoices":
                     [
-                        {"text":"Choice One",
+                        {"text":"Our work continues, regardless.",
                             "results":{
                                 "progChange": 0,
                                 "progRateChange": 0,
-                                "artifactChange": 0,
+                                "artifactChange": 5,
                                 "influenceChange": 1,
-                                "knowledgeChange": 5
+                                "knowledgeChange": 1,
+                                "nextEvent": 301
                             }
                         },
-                        {"text":"Next Event",
+                        {"text":"We must proceed with caution.",
                         "results":{
                             "progChange": 0,
                             "progRateChange": 0,
                             "artifactChange": 0,
                             "influenceChange":0,
-                            "knowledgeChange":1,
-                            "nextEvent": 1
+                            "knowledgeChange":0,
+                            "nextEvent": 301
                         }}
                     ]
                 },
-                {   "eventID":4,
-                "eventName": "Debug Next Event",
+                {   "eventID":301,
+                "eventName": "Patron: The Wyrm",
                 "eventImage":"testImage",
-                "eventText":"Body of Next Event",
+                "eventText":"The Beast swooped in with a massive show of force, scattering workers in e very direction. Each flap of its wings destroying hours of work. When the chaos ends, you discover the damage was precise. Superficial. A message.",
                 "eventChoices":
                     [
-                        {"text":"Buff I K progRate",
+                        {"text":"We must provide tribute. [-20 Artifacts]",
                             "results":{
-                                "progChange": 1,
+                                "progChange": 0,
                                 "progRateChange": 0,
-                                "artifactChange": 0,
-                                "influenceChange": 5,
-                                "knowledgeChange": 5
+                                "artifactChange": -20,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0,
+                                "nextEvent": 302
                             }
                         },
-                        {"text":"Buff artifact",
+                        {"text":"We cannot submit to a monster. [Disaster is Coming]",
                         "results":{
                             "progChange": 0,
                             "progRateChange": 0,
-                            "artifactChange": 50,
-                            "influenceChange":0,
-                            "knowledgeChange":1
+                            "artifactChange": 0,
+                            "influenceChange":5,
+                            "knowledgeChange":5,
+                            "nextEvent": 303
                         }}
+                    ]
+                },
+                {   "eventID":302,
+                "eventName": "The Beast's Favor",
+                "eventImage":"testImage",
+                "eventText":"You are greeted by the Wyrm's servants. Small, diminutive creates known as kobolds. They come bearing pickaxes and shovels.",
+                "eventChoices":
+                    [
+                        {"text":"Expert miners join the dig.",
+                            "results":{
+                                "progChange": 2,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0,
+                                "nextEvent": 304
+                            }
+                        }
+                    ]
+                },
+                {   "eventID":303,
+                "eventName": "The Price of Defiance",
+                "eventImage":"testImage",
+                "eventText":"It came at night, burning. The fires left the camp in ruins. The earth was picked clean by thieving hands. In the morning light, you assess the damage.",
+                "eventChoices":
+                    [
+                        {"text":"A tragic loss, but the price is paid.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": -100,
+                                "influenceChange": 25,
+                                "knowledgeChange": 25,
+                                "nextEvent": 304
+                            }
+                        }
+                    ]
+                },
+                {   "eventID":304,
+                "eventName": "The Wyrm's Domain",
+                "eventImage":"testImage",
+                "eventText":"To live in the shadows of giants is taxing on your health. A simple digsite has become a tug of war between different interests. And still, the Beast imposes its will on the land.",
+                "eventChoices":
+                    [
+                        {"text":"This cannot last.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 5,
+                                "knowledgeChange": 5,
+                                "nextEvent": 305
+                            }
+                        }
+                    ]
+                },
+                {   "eventID":305,
+                "eventName": "The Beast and You",
+                "eventImage":"testImage",
+                "eventText":"This uneasy peace is coming to an end. You have overstayed your welcome, and the Wyrm is coming for you.",
+                "eventChoices":
+                    [
+                        {"text":"Once more, we must give tribute. [-100 Artifacts]",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": -100,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0,
+                                "nextEvent": 306
+                
+                            }
+                        },
+                        {"text":"Seek a Hunter for this Beast. [-100 Artifacts]",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": -100,
+                            "influenceChange":0,
+                            "knowledgeChange":0,
+                            "nextEvent": 307
+                        }}
+                    ]
+                },
+                {   "eventID":306,
+                "eventName": "The Beast Slumbers",
+                "eventImage":"testImage",
+                "eventText":"Since your recent tribute the great drake has not been seen. Reports from nearby villages report their livestock goes unpreyed and caravans move freely. You know better, though. Something stirs beneath the earth.",
+                "eventChoices":
+                    [
+                        {"text":"And we must dig.",
+                            "results":{
+                                "progChange": 3,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0
+                            }
+                        }
+                    ]
+                },
+                {   "eventID":307,
+                "eventName": "The Legend Grows",
+                "eventImage":"testImage",
+                "eventText":"The hills have been ravaged by the battle between your Hunter and the Beast. The once verdant horizon is charred black. The Hunter never came home, and travellers fear open skies.",
+                "eventChoices":
+                    [
+                        {"text":"The Beast is out there, somewhere.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 0,
+                                "knowledgeChange": 0
+                            }
+                        }
                     ]
                 }
     ]

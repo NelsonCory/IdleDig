@@ -1,54 +1,164 @@
 {
     "events":[
-            {   "eventID":3,
-                "eventName": "Debug Event",
+            {   "eventID":200,
+                "eventName": "An Emissary Arrives",
                 "eventImage":"testImage",
-                "eventText":"Body of Event",
+                "eventText":"It was inevitable this project would gain the attention of the State. The Despot's Emissary has arrived to inspect your progress so far.",
                 "eventChoices":
                     [
-                        {"text":"Choice One",
+                        {"text":"Welcome him openly.",
                             "results":{
                                 "progChange": 0,
                                 "progRateChange": 0,
                                 "artifactChange": 0,
                                 "influenceChange": 1,
-                                "knowledgeChange": 5
+                                "knowledgeChange": 0,
+                                "nextEvent": 201
                             }
                         },
-                        {"text":"Next Event",
+                        {"text":"An unwelcome presence.",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 5,
+                            "influenceChange": 0,
+                            "knowledgeChange": 0,
+                            "nextEvent": 201
+                        }}
+                    ]
+                },
+                {   "eventID":201,
+                "eventName": "Patron: The Despot",
+                "eventImage":"testImage",
+                "eventText":"Like it or not, you have The Despot's attention. His Emissary is here with an agenda, clearly. The Despot would make a great ally, but what is the interest here?",
+                "eventChoices":
+                    [
+                        {"text":"Focus on the work",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 4,
+                                "influenceChange": 1,
+                                "knowledgeChange": 0,
+                                "nextEvent": 202
+                            }
+                        },
+                        {"text":"Time to play politics.",
                         "results":{
                             "progChange": 0,
                             "progRateChange": 0,
                             "artifactChange": 0,
-                            "influenceChange":0,
-                            "knowledgeChange":1,
-                            "nextEvent": 1
+                            "influenceChange": 5,
+                            "knowledgeChange": 0,
+                            "nextEvent": 202
                         }}
                     ]
                 },
-                {   "eventID":4,
-                "eventName": "Debug Next Event",
+                {   "eventID":202,
+                "eventName": "The Sovereign's Will",
                 "eventImage":"testImage",
-                "eventText":"Body of Next Event",
+                "eventText":"One night, His Emissary invites you to dinner. It is a lavish feast, fit for an old lord. He speaks many words, but says little.",
                 "eventChoices":
                     [
-                        {"text":"Buff I K progRate",
+                        {"text":"This extravagant display says enough.",
                             "results":{
-                                "progChange": 1,
+                                "progChange": 0,
                                 "progRateChange": 0,
                                 "artifactChange": 0,
-                                "influenceChange": 5,
-                                "knowledgeChange": 5
+                                "influenceChange": 10,
+                                "knowledgeChange": 0,
+                                "nextEvent": 203
                             }
                         },
-                        {"text":"Buff artifact",
+                        {"text":"Enough! Begone from here!",
                         "results":{
                             "progChange": 0,
                             "progRateChange": 0,
-                            "artifactChange": 50,
-                            "influenceChange":0,
-                            "knowledgeChange":1
+                            "artifactChange": 0,
+                            "influenceChange": 20,
+                            "knowledgeChange": 0,
+                            "nextEvent": 204
                         }}
+                    ]
+                },
+                {   "eventID":203,
+                "eventName": "Enlightened Despotism",
+                "eventImage":"testImage",
+                "eventText":"His Emissary has eyes everywhere, now. His intentions continue to elude you, until one day you are pulled aside. He provide you a letter, stamped with the Regime's sigil. A title of recognition, for your service",
+                "eventChoices":
+                    [
+                        {"text":"Accept graciously",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 15,
+                                "knowledgeChange": 0,
+                                "nextEvent": 205
+                            }
+                        },
+                        {"text":"And be dragged into another political game? Refuse.",
+                        "results":{
+                            "progChange": 0,
+                            "progRateChange": 0,
+                            "artifactChange": 0,
+                            "influenceChange": 5,
+                            "knowledgeChange": 0,
+                            "nextEvent": 206
+                        }}
+                    ]
+                },
+                {   "eventID":204,
+                "eventName": "Political Pariah",
+                "eventImage":"testImage",
+                "eventText":"Rubbing shoulders with tyrants and their henchman was never your goal. You have work to do, and the machinations of the Usurper will get you nowhere.",
+                "eventChoices":
+                    [
+                        {"text":"A new dawn rises.",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 5,
+                                "influenceChange": 5,
+                                "knowledgeChange": 5
+                            }
+                        }
+                    ]
+                }
+                ,
+                {   "eventID":205,
+                "eventName": "State Archivist",
+                "eventImage":"testImage",
+                "eventText":"Civil Service has its perks. Your word bears The Despot's approval in matters of history. Your peers may be envious, but you have a greater ally now.",
+                "eventChoices":
+                    [
+                        {"text":"The Regime Mandates...",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 25,
+                                "knowledgeChange": 0
+                            }
+                        }
+                    ]
+                }
+                ,
+                {   "eventID":206,
+                "eventName": "The Despot's Attention",
+                "eventImage":"testImage",
+                "eventText":"Your intentions are as unclear to His Emissary as his are to you. Insistence on your work has earned you the respect of certain figures of authority. Your name is on their lips.",
+                "eventChoices":
+                    [
+                        {"text":"For Better or Worse",
+                            "results":{
+                                "progChange": 0,
+                                "progRateChange": 0,
+                                "artifactChange": 0,
+                                "influenceChange": 10,
+                                "knowledgeChange": 0
+                            }
+                        }
                     ]
                 }
     ]
