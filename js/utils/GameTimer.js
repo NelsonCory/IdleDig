@@ -5,7 +5,7 @@ class GameTimer{
         this.status = "on";
         
         this.EventTimer = this.scene.time.addEvent({
-                    delay: 15000,                // ms 30000
+                    delay: 15000,                // ms 15000
                     callback: this.onEventFire,
                     callbackScope: this,
                     loop: true,

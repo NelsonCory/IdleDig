@@ -27,9 +27,11 @@ window.onload=function()
             parent: 'phaser-game',
             scene: [SceneMain,SceneGameOver]
         };
+        console.log(window.innerWidth + " " + window.innerHeight);
     }
     G = new Constants();
     model = new Model();
     model.isMobile=isMobile;
     game = new Phaser.Game(config);
+    
 }
