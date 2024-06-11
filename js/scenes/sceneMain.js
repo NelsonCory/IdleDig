@@ -5,7 +5,7 @@ class SceneMain extends Phaser.Scene {
     preload()
     {
         //load images or sounds
-        this.load.image("button1","assets/dig-temp.png");
+        this.load.image("button1","assets/dig-temp2.png");
         this.load.image("digger","assets/mr-dig.png");
         this.load.image("eventBack","assets/eventBackground.png");
         this.load.image("testImage","assets/testImage.png");
@@ -18,7 +18,7 @@ class SceneMain extends Phaser.Scene {
         this.load.image("influenceIcon","assets/influenceIcon.png");
         this.load.image("artifactIcon","assets/artifactIcon.png");
         this.load.image("knowledgeIcon","assets/knowledgeIcon.png");
-        this.load.image("sceneBackground","assets/sceneBackground.png");
+        this.load.image("sceneBackground","assets/sceneBackground3.png");
 
         
         
@@ -59,8 +59,8 @@ class SceneMain extends Phaser.Scene {
 		//should scale based on button size
         var flatButton = new FlatButton({scene:this, key:"button1",x:game.config.width/2,y: Math.floor(game.config.height*0.8), event:'button_pressed',params:"dig"});
 		var digger = this.add.image(game.config.width/2,game.config.height/2,"digger");
-        digger.scaleX = 1.2;
-        digger.scaleY = 1.2;
+        digger.scaleX = 1.3;
+        digger.scaleY = 1.3;
 
         //create incremental boxes
         this.pb = new ProgressBox({scene:this});

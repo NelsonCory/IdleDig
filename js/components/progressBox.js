@@ -7,13 +7,15 @@ class ProgressBox extends Phaser.GameObjects.Container
 
         this.progGoal=10;
 
-        this.text1 = this.scene.add.text(0,0,"0",{fontFamily: 'Garamond', fontSize: 15});
+        this.text1 = this.scene.add.text(0,0,"0",{fontFamily: 'Garamond', fontSize: 15,stroke: "#000000",
+            strokeThickness: 3});
         this.text1.setOrigin(0.5,0.5);
         this.add(this.text1);
     
 
 
-       this.text2 = this.scene.add.text(this.text1.x,this.text1.y+30,model.progGoal,{fontFamily: 'Garamond', fontSize: 15});
+       this.text2 = this.scene.add.text(this.text1.x,this.text1.y+30,model.progGoal,{fontFamily: 'Garamond', fontSize: 15,stroke: "#000000",
+        strokeThickness: 3});
        this.text2.setOrigin(0.5,0.5);
        this.add(this.text2);
     
