@@ -13,13 +13,13 @@ class EventBox extends Phaser.GameObjects.Container{
         this.eventBack = this.scene.add.image(game.config.width/2,game.config.height/2,"eventBack");
         this.eventBack.setOrigin(0.5,0.5);
 
-        this.eventName = this.scene.add.text(this.eventBack.x,Math.floor(this.eventBack.y - this.eventBack.height*0.43),this.event.eventName,  {fontFamily: 'Garamond', fontSize: 30, color: 'black'}); // 0.18
+        this.eventName = this.scene.add.text(this.eventBack.x,Math.floor(this.eventBack.y - this.eventBack.height*0.37),this.event.eventName,  {fontFamily: 'Garamond', fontSize: 30, color: 'black'}); // 0.18
         this.eventName.setOrigin(0.5,0.5);
 
         this.eventImage = this.scene.add.image(this.eventBack.x,Math.floor(this.eventBack.y - this.eventBack.height*0.18),this.event.eventImage); // 0.35
         this.eventImage.setOrigin(0.5,0.5);
 
-        this.eventText = this.scene.add.text(this.eventBack.x,Math.floor(this.eventBack.y + this.eventBack.height * 0.1),this.event.eventText, { fontFamily: 'Garamond', fontSize: 15, color: 'black',wordWrap: { width: this.eventBack.width - 30 } }); //0.55
+        this.eventText = this.scene.add.text(this.eventBack.x,Math.floor(this.eventBack.y + this.eventBack.height * 0.11),this.event.eventText, { fontFamily: 'Garamond', fontSize: 18, color: 'black',wordWrap: { width: this.eventBack.width - 70 } }); //0.55
         this.eventText.setOrigin(0.5,0.5);
         
         // var flatButton = new FlatButton({scene:this, key:"button1",x:game.config.width/2,y:game.config.height - 100, event:'button_pressed',params:"dig"});
