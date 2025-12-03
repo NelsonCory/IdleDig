@@ -57,7 +57,7 @@
                 {   "eventID":302,
                 "eventName": "The Beast's Favor",
                 "eventImage":"wyrmImage",
-                "eventText":"You are greeted by the Wyrm's servants. Small, diminutive creates known as kobolds. They come bearing pickaxes and shovels.",
+                "eventText":"You are greeted by the Wyrm's servants. Small, diminutive creatures known as kobolds. They come bearing pickaxes and shovels.",
                 "eventChoices":
                     [
                         {"text":"Expert miners join the dig.",
