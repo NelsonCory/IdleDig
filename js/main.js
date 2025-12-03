@@ -3,7 +3,8 @@ var model;
 var emitter;
 var G;
 var controller;
-window.onload=function()
+
+function initializeGame()
 {
 	//thanks to phasergames.com for code snippets
     var isMobile = navigator.userAgent.indexOf("Mobile");
@@ -33,5 +34,17 @@ window.onload=function()
     model = new Model();
     model.isMobile=isMobile;
     game = new Phaser.Game(config);
-    
+}
+
+window.onload=function()
+{
+	// Wait for fonts to load before initializing Phaser
+	if (document.fonts && document.fonts.ready) {
+		document.fonts.ready.then(function() {
+			initializeGame();
+		});
+	} else {
+		// Fallback for browsers without document.fonts API
+		setTimeout(initializeGame, 100);
+	}
 }

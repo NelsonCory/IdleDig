@@ -41,7 +41,58 @@
 
 </head>
 <body style="margin: 0">
-
+<style media='screen' type='text/css'>
+      @font-face {
+        font-family: Font_Fantasy;
+        src: url('assets/fonts/Font_Fantasy.ttf');
+        font-weight:400;
+        font-weight:normal;
+      }
+      @font-face {
+        font-family: Everyday_Standard;
+        src: url('assets/fonts/Everyday_Standard.ttf');
+        font-weight:400;
+        font-weight:normal;
+      }
+</style>
+	<script>
+		// Preload and warm up the custom fonts
+		(function() {
+			if (document.fonts && document.fonts.ready) {
+				document.fonts.ready.then(function() {
+					// Create a hidden element to "warm up" Font_Fantasy
+					var fontLoaderFantasy = document.createElement('div');
+					fontLoaderFantasy.style.fontFamily = 'Font_Fantasy';
+					fontLoaderFantasy.style.position = 'absolute';
+					fontLoaderFantasy.style.left = '-9999px';
+					fontLoaderFantasy.style.visibility = 'hidden';
+					fontLoaderFantasy.textContent = 'Font Loader';
+					document.body.appendChild(fontLoaderFantasy);
+					
+					// Create a hidden element to "warm up" Everyday_Standard
+					var fontLoaderEveryday = document.createElement('div');
+					fontLoaderEveryday.style.fontFamily = 'Everyday_Standard';
+					fontLoaderEveryday.style.position = 'absolute';
+					fontLoaderEveryday.style.left = '-9999px';
+					fontLoaderEveryday.style.visibility = 'hidden';
+					fontLoaderEveryday.textContent = 'Font Loader';
+					document.body.appendChild(fontLoaderEveryday);
+					
+					// Force font rendering in canvas for Font_Fantasy
+					var canvasFantasy = document.createElement('canvas');
+					var ctxFantasy = canvasFantasy.getContext('2d');
+					ctxFantasy.font = '30px Font_Fantasy';
+					ctxFantasy.fillText('Warm up', 0, 0);
+					
+					// Force font rendering in canvas for Everyday_Standard
+					var canvasEveryday = document.createElement('canvas');
+					var ctxEveryday = canvasEveryday.getContext('2d');
+					ctxEveryday.font = '18px Everyday_Standard';
+					ctxEveryday.fillText('Warm up', 0, 0);
+				});
+			}
+		})();
+	</script>
     <div id="idle-dig" style="display: block; margin-left:auto;margin-right:auto"></div>
 
 </body>
