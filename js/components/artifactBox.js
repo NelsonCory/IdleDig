@@ -7,9 +7,10 @@ class ArtifactBox extends Phaser.GameObjects.Container
 
         this.key = config.key;
         this.icon = this.scene.add.image(Math.floor(game.config.width*0.5),Math.floor(game.config.height*0.05),config.key);
-
-        this.text1 = this.scene.add.text(25,0,"0",{
+        this.icon.setOrigin(0.5,0.5);
+        this.text1 = this.scene.add.text(this.icon.x-25,this.icon.y-25,"0",{
                     fontSize: "20px",
+                    fontFamily: 'Everyday_Standard',
                     stroke: "#000000",
                     strokeThickness: 4});
         //this.text1.setOrigin(0.5,0.5);

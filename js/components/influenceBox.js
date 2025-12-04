@@ -10,6 +10,7 @@ class InfluenceBox extends Phaser.GameObjects.Container
         this.icon.setOrigin(0.5,0.5);
         this.text1 = this.scene.add.text(this.icon.x-25,this.icon.y-25,"0",{
             fontSize: "20px",
+            fontFamily: 'Everyday_Standard',
             stroke: "#000000",
             strokeThickness: 4});
         this.text1.setOrigin(0.5,0.5);
