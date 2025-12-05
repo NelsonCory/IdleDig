@@ -22,11 +22,11 @@ class SceneGameOver extends Phaser.Scene {
 
         }
 
-        var influenceScore =  this.add.text(Math.floor(game.config.width*0.6) ,Math.floor(game.config.height*0.7) ,"Influence: " + model.influence,{color:"white",fontFamily: 'Everyday_Standard', fontSize: 20});
+        var influenceScore =  this.add.text(Math.floor(game.config.width*0.77) ,Math.floor(game.config.height*0.7) ,"Influence: " + model.influence,{color:"white",fontFamily: 'Everyday_Standard', fontSize: 20});
         influenceScore.setOrigin(0.5,0.5);
-        var knowledgeScore =  this.add.text(Math.floor(game.config.width*0.6) ,Math.floor(game.config.height*0.75),"Knowledge: " + model.knowledge,{color:"white",fontFamily: 'Everyday_Standard', fontSize: 20});
+        var knowledgeScore =  this.add.text(Math.floor(game.config.width*0.48) ,Math.floor(game.config.height*0.75),"Knowledge: " + model.knowledge,{color:"white",fontFamily: 'Everyday_Standard', fontSize: 20});
         knowledgeScore.setOrigin(0.5,0.5);
-        var artifactScore =  this.add.text(Math.floor(game.config.width*0.5) ,Math.floor(game.config.height*0.7),"Artifacts: " + model.artifact,{color:"white",fontFamily: 'Everyday_Standard', fontSize: 20});
+        var artifactScore =  this.add.text(Math.floor(game.config.width*0.28) ,Math.floor(game.config.height*0.7),"Artifacts: " + model.artifact,{color:"white",fontFamily: 'Everyday_Standard', fontSize: 20});
         artifactScore.setOrigin(0.5,0.5);
     }
     update() {}
